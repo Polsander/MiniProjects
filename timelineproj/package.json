@@ -10,8 +10,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/lodash": "^4.14.194",
+    "@types/react-router-dom": "^5.3.3",
+    "bootstrap": "^5.2.3",
+    "lodash": "^4.17.21",
+    "node-sass": "^9.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-bootstrap": "^2.7.4",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.11.2",
+    "redux": "^4.2.1",
+    "sass": "^1.62.1",
+    "semantic-ui-css": "^2.5.0",
+    "semantic-ui-react": "^2.1.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
