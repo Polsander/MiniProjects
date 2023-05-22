@@ -9,6 +9,7 @@ import Card from 'react-bootstrap/Card';
 interface props {
   children: ReactNode;
   numberOfPages: number;
+  handleFormSubmit: () => void;
 }
 
 export const TimeLine: React.FC<props> = (props) => {
@@ -24,7 +25,7 @@ export const TimeLine: React.FC<props> = (props) => {
       {props.children}
       <Card>
         <Card.Body>
-          <LowerBar numberOfPages={props.numberOfPages}/>
+          <LowerBar numberOfPages={props.numberOfPages} handleFormSubmit={props.handleFormSubmit}/>
         </Card.Body>
       </Card>
     </>

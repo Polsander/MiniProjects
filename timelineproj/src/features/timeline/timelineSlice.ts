@@ -28,9 +28,13 @@ const timelineSlice = createSlice({
 
         selectStep: (state, action) => {
             state.step = action.payload;
+        },
+
+        resetTimeline: (state) => {
+            return initialState;
         }
     }
 });
 
 export default timelineSlice.reducer;
-export const { increaseStep, decreaseStep, selectStep } = timelineSlice.actions;
+export const { increaseStep, decreaseStep, selectStep, resetTimeline } = timelineSlice.actions;

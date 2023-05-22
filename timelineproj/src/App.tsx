@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='maindiv'>
         <RouterProvider router={Router} />
       </div>
     </>
@@ -28,7 +28,7 @@ function App() {
 
 const Root = () => { // THIS IS LIKE A PAGE!!!!
   return <>
-    <div className='mt-3 ms-3'>
+    <div className='mt-3 ms-3 maindiv'>
       <Link to="/">Home</Link>
       <Link to="/contact">Contact</Link>
     </div>
