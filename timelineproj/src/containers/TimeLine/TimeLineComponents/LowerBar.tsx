@@ -16,7 +16,7 @@ export const LowerBar: React.FC<LowerBarProps> = (props) => {
 
     const dispatch = useDispatch();
     const timelineState = useSelector((state: TimelineStateInterface) => state.timeline)
-    const { step } = timelineState;
+    const { currentIndex } = timelineState;
 
 
     const handlePrevious = () => {
@@ -35,12 +35,12 @@ export const LowerBar: React.FC<LowerBarProps> = (props) => {
     return (
         <div className='d-flex justify-content-center'>
             <span className='mx-3'>
-                <Button onClick={handlePrevious} disabled={step === 1 ? true : false}>Previous</Button>
+                <Button onClick={handlePrevious} disabled={currentIndex === 1 ? true : false}>Previous</Button>
             </span>
             <span className='mx-3'>
-                <Button onClick={handleNext} disabled={step === props.numberOfPages ? true : false}>Next</Button>
+                <Button onClick={handleNext} disabled={currentIndex === props.numberOfPages ? true : false}>Next</Button>
             </span>
-            {step === props.numberOfPages ?
+            {currentIndex === props.numberOfPages ?
                 <span className='mx-3'>
                     <Button
                         variant='success'

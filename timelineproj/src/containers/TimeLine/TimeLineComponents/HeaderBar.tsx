@@ -16,7 +16,7 @@ export const HeaderBar: React.FC<props> = (props) => {
 
     const dispatch = useDispatch();
     const timelineState = useSelector((state: TimelineStateInterface) => state.timeline);
-    const { step } = timelineState;
+    const { currentIndex } = timelineState;
 
     const selectedClass = `${styles.headerIndex} ${styles.selected}`;
 
@@ -37,7 +37,7 @@ export const HeaderBar: React.FC<props> = (props) => {
                 line = <span className={styles.horizontal_divider}></span>
             }
 
-            if (step === i + 1) {
+            if (currentIndex === i + 1) {
                 classStyle = selectedClass;
             } else {
                 classStyle = `${styles.headerIndex}`;

@@ -2,14 +2,20 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export interface TimelineStateInterface {
     timeline: {
-        step: number,
+        attributes: {
+            step: number,
+            title: string,
+            validated: boolean,
+        }[],
+        currentIndex: number,
         formId: string,
         data: []
     }
 }
 
 const initialState: TimelineStateInterface["timeline"] = {
-    step: 1,
+    attributes: [{step: 1, title:'', validated: false}],
+    currentIndex: 1,
     formId: '',
     data: []
 }
@@ -19,15 +25,15 @@ const timelineSlice = createSlice({
     initialState,
     reducers: {
         increaseStep: (state) => {
-            state.step += 1;
+            state.currentIndex += 1;
         },
 
         decreaseStep: (state) => {
-            state.step -= 1;
+            state.currentIndex -= 1;
         },
 
         selectStep: (state, action) => {
-            state.step = action.payload;
+            state.currentIndex = action.payload;
         },
 
         resetTimeline: (state) => {
